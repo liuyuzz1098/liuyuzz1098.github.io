@@ -1,32 +1,145 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>秋风甚好 | liuyuzz</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="那年秋来时，一切甚好。银杏树上的叶儿才微微黄，地上已是蹚了厚厚一层被秋晕了完整的小扇叶，拾起一两片夹在书中，这曾是儿时最大的乐趣了。叶儿干硬的时候就成了十分喜人的书签，那时候书也被印上了不深不浅的印痕，印儿也微微泛黄，好似秋来的时候一切都会契合秋的主旋律一样。心若是急了，那印出的书签便会有许的瑕疵，那便不善了。、走着便不忍与自己轻声言语一声：“轻听，有风将至。”生怕些许的声响便骇得那缕微风偷偷地转">
+<meta property="og:type" content="article">
+<meta property="og:title" content="秋风甚好">
+<meta property="og:url" content="http://example.com/2022/09/01/%E7%A7%8B%E9%A3%8E%E7%94%9A%E5%A5%BD/index.html">
+<meta property="og:site_name" content="liuyuzz">
+<meta property="og:description" content="那年秋来时，一切甚好。银杏树上的叶儿才微微黄，地上已是蹚了厚厚一层被秋晕了完整的小扇叶，拾起一两片夹在书中，这曾是儿时最大的乐趣了。叶儿干硬的时候就成了十分喜人的书签，那时候书也被印上了不深不浅的印痕，印儿也微微泛黄，好似秋来的时候一切都会契合秋的主旋律一样。心若是急了，那印出的书签便会有许的瑕疵，那便不善了。、走着便不忍与自己轻声言语一声：“轻听，有风将至。”生怕些许的声响便骇得那缕微风偷偷地转">
+<meta property="og:locale">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-09-01T10:23:37.000Z">
+<meta property="article:modified_time" content="2022-09-01T10:57:41.877Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/09/01/%E7%A7%8B%E9%A3%8E%E7%94%9A%E5%A5%BD/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '秋风甚好',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-09-01 18:57:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">liuyuzz</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">秋风甚好</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-09-01T10:23:37.000Z" title="Created 2022-09-01 18:23:37">2022-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-09-01T10:57:41.877Z" title="Updated 2022-09-01 18:57:41">2022-09-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="秋风甚好"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>那年秋来时，一切甚好。<br>银杏树上的叶儿才微微黄，地上已是蹚了厚厚一层被秋晕了完整的小扇叶，拾起一两片夹在书中，这曾是儿时最大的乐趣了。<br>叶儿干硬的时候就成了十分喜人的书签，那时候书也被印上了不深不浅的印痕，印儿也微微泛黄，好似秋来的时候一切都会契合秋的主旋律一样。<br>心若是急了，那印出的书签便会有许的瑕疵，那便不善了。、<br>走着便不忍与自己轻声言语一声：“轻听，有风将至。”生怕些许的声响便骇得那缕微风偷偷地转换了方向，风啊再秋来之后，总的是如此胆小。<br>不消片刻，便真有微风吹来，卷着地上片片扇叶。这一瞬，心啊、气儿啊都兀地清爽了。追着风儿走啊、走啊，不觉间一路上就丢了许的忧思，转头望去，都埋在了银杏叶下了，若这时再铺了一层白雪，那便更好了。<br>可是啊，飘雪之前那片片银杏就早已匿了踪迹，打开书兴许还能寻得一两片，可那是我对秋的纪念啊！<br>如若哪天心气沉了，便找到那本夹了银杏的书，打开，仍能看到银杏上记录着的拾起它时的景，不过更很多的景啊，其实都躲在我心里咧！<br>可能小气是我的本性，夹在哪里的叶儿，总会规规整整地置在原地，生怕那些珍了许久的银杏的叶儿会不适应新的环境，更怕叶里的景啊，心中的景啊，都飞也似地逃开，那便不太善咯！<br>翻着那些藏得皱的发黄的书时，总是希冀着可以寻到些儿时藏在里面的银杏，偶然寻到一枚便能开心良久。若能觅着印记寻回当时的乐趣，便觉着自己也回到了那段无虑的时光，有一枚被我珍的甚好的银杏叶上就定格着一个令我现在想来也会发笑的故事。<br>最早知道银杏叶这样有趣的东西的时候还是个孩童，曾有同龄玩伴不知从哪儿寻得一枚翠绿的银杏叶，视若珍宝。<br>当时瞧见了，只觉得心生些羡慕，可总觉得那可人的叶里藏着小美好，可惜不属于我罢了。<br>那是离开家乡的第一个年头，适逢初秋，瞧着路两旁成排的银杏树，觉着择下一两片都是破坏了这份美好，谁料秋风知我意。<br>一片扇叶在风拂下悠悠然，飘落而下，那时还不晓得要轻些、缓些，心急的半大孩子追着飘落的叶儿跑去，秋风骇地卷着叶儿撒丫子跑开，一时间不晓得多少银杏叶飘下被风卷走。<br>孩子有些急了哪还管这漫天飞舞的便都是银杏叶，拦下一捧，向前泼去，叫道：“打你个秋风！”<br>兴许是孩子猛如虎的操作逗到了秋风，一枚银杏叶轻飘飘地落在孩子眉眼间，孩子拿下银杏叶，豁然乐了，那年我与风同龄。<br>那会哪晓得什么愁啊，错过了便不去想了，好像得知我幸失之我命是与生俱来的洒脱心态。<br>可不觉间看，这份寻常新便失得无影无踪了，好似也一并埋在了那成堆成堆的银杏中了，待我去寻他归来之时，早已不知被哪个机灵的孩子珍藏了起来，如此，倒也甚好！<br>“打你个秋风。”走着不知是不是因为儿时的言语太过有意思，便蓦然学道。<br>当真是秋风识人，听到这笑也似地言语悄然在我的指尖打了个转，随后一阵微风走开了，轻摇着手与这个熟悉又陌生的友人道别。<br>感受着它缓步离去，只觉得“打秋风”甚失我意，如此温柔的秋风倒也舍得打它？倒是那打家劫舍的原意早已被丢到九霄云外了，只顾为秋风心疼了。<br>那年，那秋，那微风，一叶银杏，一年秋来，盼着那个寻到我丢了许久的“平常心”的孩子可以将它珍藏的更好些。<br>如此一来，秋风甚好，兴许待来年秋来，银杏再度金黄之时，也甚好……<br>2020.11.26<br>侯皮皮同学<br>秋风虽知我意，可它终究不是你</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/09/01/%E7%A7%8B%E9%A3%8E%E7%94%9A%E5%A5%BD/">http://example.com/2022/09/01/%E7%A7%8B%E9%A3%8E%E7%94%9A%E5%A5%BD/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/09/01/hello-world/"><img class="next-cover" src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/01/%E7%A7%8B%E9%A3%8E%E7%94%9A%E5%A5%BD/" title="秋风甚好"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="秋风甚好"/></a><div class="content"><a class="title" href="/2022/09/01/%E7%A7%8B%E9%A3%8E%E7%94%9A%E5%A5%BD/" title="秋风甚好">秋风甚好</a><time datetime="2022-09-01T10:23:37.000Z" title="Created 2022-09-01 18:23:37">2022-09-01</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/09/01/hello-world/" title="Hello World">Hello World</a><time datetime="2022-09-01T09:49:15.709Z" title="Created 2022-09-01 17:49:15">2022-09-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
